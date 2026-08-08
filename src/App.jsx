@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Home from "./Pages/Home";
-import ProjectsPage from "./pages/ProjectPage";
+import ProjectsPage from "./Pages/ProjectPage";
 
 function App() {
   const [theme, setTheme] = useState("dark");
