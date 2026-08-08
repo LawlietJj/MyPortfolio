@@ -267,7 +267,7 @@ export default function About() {
         <div className="flex flex-wrap gap-4">
 
           {[
-            "Flutter",
+            "Flutter/Dart",
             "Git",
             "GitHub",
             "Azure",
