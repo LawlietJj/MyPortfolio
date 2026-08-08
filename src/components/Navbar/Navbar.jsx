@@ -2,7 +2,7 @@ import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
-import useNavbar from "./useNavbar";
+import useNavbar from "./UseNavbar";
 
 export default function Navbar({ theme, onToggleTheme }) {
   const { activeSection, scrolled } = useNavbar();
