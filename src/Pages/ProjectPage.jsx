@@ -6,7 +6,7 @@ import clearanceImage from "../components/Projects/clearance system.png";
 import campusImage from "../components/Projects/campuusconnect.png";
 import autoworldImage from "../components/Projects/auto.png";
 import examImage from "../components/Projects/examparser.png";
-import skyImage from "../components/Projects/skyinventory.png";
+import skyImage from "../components/Projects/skyimage.png";
 
 
 const projects = [
