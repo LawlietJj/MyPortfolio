@@ -6,6 +6,7 @@ import clearanceImage from "../components/Projects/clearance system.png";
 import campusImage from "../components/Projects/campuusconnect.png";
 import autoworldImage from "../components/Projects/auto.png";
 import examImage from "../components/Projects/examparser.png";
+import skyImage from "../components/Projects/skyinventory.png";
 
 
 const projects = [
@@ -35,7 +36,7 @@ const projects = [
     title: "Sky Inventory",
     category: "Enterprise",
     subtitle: "Inventory ERP",
-    image: heroImage,
+    image: skyImage,
     technologies: ["Django", "Azure", "MySQL"],
     description:
       "Inventory and sales management platform with authentication, reporting and cloud deployment.",
