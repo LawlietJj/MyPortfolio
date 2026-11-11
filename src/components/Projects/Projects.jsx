@@ -1,12 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/hero.png";
 import northhavenImage from "./northhaven.png";
 import clearanceImage from "./clearance system.png";
 import campusConnectImage from "./campuusconnect.png";
 import autoworldimage from "./auto.png"
 import examImage from "./examparser.png"
+import skyImage from "./skyimage.png"
+import checklosImage from "./checklos.png"
+import exoticImage from "./exotic.png"
+
+const githubProfile = "https://github.com/LawlietJj";
 
 const projects = [
   {
@@ -23,7 +27,7 @@ const projects = [
       "REST API",
       "Azure",
     ],
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -40,14 +44,14 @@ const projects = [
       "HTML/CSS",
       "CarQuery API",
     ],
-    github: "#",
+    github: githubProfile,
   },
 
   {
     number: "03",
     title: "Sky Inventory",
     subtitle: "ERP & Inventory",
-    image: heroImage,
+    image: skyImage,
     description:
       "Inventory and sales management platform with authentication, dashboards and cloud deployment.",
     stack: [
@@ -56,7 +60,7 @@ const projects = [
       "MySQL",
       "Python",
     ],
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -72,7 +76,8 @@ const projects = [
       "Framer Motion",
       "Vite",
     ],
-    github: "#",
+    github: githubProfile,
+    live: "https://northhaven.com.ng/",
   },
 
   {
@@ -89,7 +94,7 @@ const projects = [
       "OCR",
       "Tailwind",
     ],
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -106,7 +111,31 @@ const projects = [
       "JavaScript",
       "MySQL",
     ],
-    github: "#",
+    github: githubProfile,
+  },
+
+  {
+    number: "07",
+    title: "Checklos",
+    subtitle: "African Marketplace",
+    image: checklosImage,
+    description:
+      "An e-commerce platform connecting makers of African products with customers around the world.",
+    stack: ["TypeScript", "Next.js","Express",  "AWS Cloud"],
+    github: githubProfile,
+    live: "https://www.checklos.com/products",
+  },
+
+  {
+    number: "08",
+    title: "Exotic Collections",
+    subtitle: "Kidswear POS & Inventory",
+    image: exoticImage,
+    description:
+      "A point-of-sale and inventory system built for a children's clothing business.",
+    stack: ["MySQL", "React", "Express", "Node.js", "Hostinger"],
+    github: githubProfile,
+    live: "https://pos.exoticcollections.com.ng/login",
   },
 ];
 
@@ -248,10 +277,21 @@ className="flex items-center gap-3"
 
 <div className="flex gap-8 mt-14">
 
+{project.live && (
+  <a
+    href={project.live}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="uppercase tracking-[0.22em] text-sm text-white/35 hover:text-white transition"
+  >
+    Live Site ↗
+  </a>
+)}
+
 <a
-
 href={project.github}
-
+target="_blank"
+rel="noopener noreferrer"
 className="uppercase tracking-[0.22em] text-sm text-white/35 hover:text-white transition"
 >
 
@@ -497,8 +537,21 @@ GitHub ↗
 
         <div className="flex justify-between ">
 
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mt-10 uppercase tracking-[0.22em] text-sm text-white/35 hover:text-white transition"
+            >
+              Live Site ↗
+            </a>
+          )}
+
           <a
           href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
           className="
             inline-flex
             mt-10

@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 
-import heroImage from "../assets/hero.png";
 import northhavenImage from "../components/Projects/northhaven.png";
 import clearanceImage from "../components/Projects/clearance system.png";
 import campusImage from "../components/Projects/campuusconnect.png";
 import autoworldImage from "../components/Projects/auto.png";
 import examImage from "../components/Projects/examparser.png";
 import skyImage from "../components/Projects/skyimage.png";
+import checklosImage from "../components/Projects/checklos.png";
+import exoticImage from "../components/Projects/exotic.png";
 
+const githubProfile = "https://github.com/LawlietJj";
 
 const projects = [
   {
@@ -18,7 +20,7 @@ const projects = [
     technologies: ["Flutter", "ASP.NET Core", "MySQL"],
     description:
       "A university platform connecting students and administrators through announcements, safety alerts, attendance and academic services.",
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -29,7 +31,7 @@ const projects = [
     technologies: ["PHP", "MySQL", "JavaScript"],
     description:
       "Modern vehicle marketplace with search, specifications and responsive user experience.",
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -40,7 +42,7 @@ const projects = [
     technologies: ["Django", "Azure", "MySQL"],
     description:
       "Inventory and sales management platform with authentication, reporting and cloud deployment.",
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -51,7 +53,8 @@ const projects = [
     technologies: ["React", "Tailwind", "Framer Motion"],
     description:
       "Premium corporate website designed with a clean enterprise aesthetic.",
-    github: "#",
+    github: githubProfile,
+    live: "https://northhaven.com.ng/",
   },
 
   {
@@ -62,7 +65,7 @@ const projects = [
     technologies: ["React", "PHP", "Gemini AI"],
     description:
       "AI-powered examination parser that converts scanned exams into structured digital content.",
-    github: "#",
+    github: githubProfile,
   },
 
   {
@@ -73,7 +76,31 @@ const projects = [
     technologies: ["PHP", "MySQL", "Bootstrap"],
     description:
       "Digital clearance platform for universities with department approvals and workflow tracking.",
-    github: "#",
+    github: githubProfile,
+  },
+
+  {
+    title: "Checklos",
+    category: "E-commerce",
+    subtitle: "African Marketplace",
+    image: checklosImage,
+    technologies: ["TypeScript", "React", "AWS Cloud"],
+    description:
+      "An e-commerce platform connecting makers of African products with customers around the world.",
+    github: githubProfile,
+    live: "https://www.checklos.com/products",
+  },
+
+  {
+    title: "Exotic Collections",
+    category: "Retail",
+    subtitle: "Kidswear POS & Inventory",
+    image: exoticImage,
+    technologies: ["MySQL", "React", "Java", "Express", "Node.js", "Hostinger"],
+    description:
+      "A point-of-sale and inventory system built for a children's clothing business.",
+    github: githubProfile,
+    live: "https://pos.exoticcollections.com.ng/login",
   },
 ];
 
@@ -210,10 +237,22 @@ export default function ProjectsPage() {
 
                 {/* GITHUB */}
 
-                <div className="mt-6 sm:mt-9">
+                <div className="mt-6 flex gap-6 sm:mt-9">
 
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-white/40 transition hover:text-white"
+                    >
+                      Live Site ↗
+                    </a>
+                  )}
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-white/40 transition hover:text-white"
                   >
                     GitHub ↗
